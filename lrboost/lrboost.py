@@ -3,10 +3,10 @@ from sklearn.linear_model import RidgeCV
 import numpy as np
 from sklearn.utils.validation import check_is_fitted
 from typing import Dict
-from sklearn.base import RegressorMixin
+from sklearn.base import BaseEstimator, RegressorMixin
 
 
-class LRBoostRegressor(RegressorMixin):
+class LRBoostRegressor(RegressorMixin, BaseEstimator):
     def __init__(self, linear_model=None, non_linear_model=None):
         if linear_model is None:
             linear_model = RidgeCV()
