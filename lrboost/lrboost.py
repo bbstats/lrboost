@@ -1,9 +1,10 @@
+from typing import Dict
+
+import numpy as np
+from sklearn.base import BaseEstimator, RegressorMixin
 from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.linear_model import RidgeCV
-import numpy as np
 from sklearn.utils.validation import check_is_fitted
-from typing import Dict
-from sklearn.base import BaseEstimator, RegressorMixin
 
 
 class LRBoostRegressor(RegressorMixin, BaseEstimator):
